@@ -1,1 +1,37 @@
-// Заголовки, общие БЄМ блоки и проче...
+.wrapper {
+    max-width: 1380px;
+    padding: 0 20px;
+}
+
+//Цвет для шрифтов
+$black:#222329;
+
+//Цвета
+$white: #FCFBFF;
+$lightWhite:#FFFFFF;
+
+$violet:#705EDC;
+$lightViolet:#BBB2EB;
+
+$gray: #6D6D70;
+$lightGray:#F3F3F3;
+
+//Цвет фона для тёмной темы
+$darkViolet: linear-gradient(121.09deg, #1C1231 18.81%, #000000 18.81%, #1C1231 18.82%, #150F22 60.67%, #000000 100%);
+
+p{
+    font-family: 'Bad Script', cursive;
+}
+
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+    color: $black;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: 700;
+}
+
+
+
