@@ -1,6 +1,7 @@
 .wrapper {
     max-width: 1380px;
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 //Цвет для шрифтов
@@ -17,7 +18,7 @@ $gray: #6D6D70;
 $lightGray:#F3F3F3;
 
 //Цвет фона для тёмной темы
-$darkViolet: linear-gradient(121.09deg, #1C1231 18.81%, #000000 18.81%, #1C1231 18.82%, #150F22 60.67%, #000000 100%);
+$darkViolet: linear-gradient(121.09deg, #1C1231 18.81%, #bf8787 18.81%, #1C1231 18.82%, #150F22 60.67%, #000000 100%);
 
 p{
     font-family: 'Bad Script', cursive;
@@ -33,5 +34,23 @@ h1{
     font-weight: 700;
 }
 
+html, body{
+    margin: 0;
+    padding: 0; 
+}
 
+body{
+    overflow: hidden;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    background-color: $white;
+}
 
+//Белые скругленные блоки
+.bg-block{
+    background: $lightWhite;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 25px 25px 0px;
+}

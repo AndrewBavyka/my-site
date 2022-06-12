@@ -1,0 +1,100 @@
+.sidebar-active {
+    &__container {
+        height: 100%;
+        width: 235px;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+
+        // padding: 90px 58px;
+        &-close {
+            display: flex;
+            justify-content: end;
+            width: 90%;
+            padding-top: 20px;
+            cursor: pointer;
+        }
+
+    }
+
+    &__nav {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 90px 0;
+
+        .menu {
+            &.menu-nav {}
+
+            &-list {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 37px;
+
+                &-item {
+                    list-style: none;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .drop-link {
+                        opacity: 0;
+                        transition: 0.3s;
+                        transform: translateY(0px);
+                    }
+                }
+            }
+
+            &-link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: $lightGray;
+                border-radius: 25px;
+                width: 100px;
+                height: 100px;
+                transition: .3s;
+
+                & img {
+                    width: 55px;
+                    height: 55px;
+
+                }
+
+                &:hover {
+                    background-color: $lightViolet;
+                }
+
+                &:hover+.drop-link {
+                    opacity: 1;
+                    transform: translateY(15px);
+                }
+
+                &.active-link {
+                    background-color: $violet;
+                }
+
+                &-tg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #039BE5;
+                    border-radius: 25px;
+
+                    &:hover+.drop-link {
+                        opacity: 1;
+                        transform: translateY(15px);
+                    }
+                }
+
+            }
+        }
+    }
+}
