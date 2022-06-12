@@ -1,49 +1,27 @@
+"use strict";
 import "../scss/style.scss";
 
+// изменение цвета темы
+import "./files/toggleTheme.js";
+
+// import "./files/sliders.js";
 import * as flsFunctions from "./files/functions.js";
 
-const btnToggleTheme = document.querySelector('.btn-toggle-theme')
+flsFunctions.isWebp();
 
-const root = document.documentElement;
-const backgroundDarkTheme = document.querySelector('.dark-theme');
+const sidebarElement = document.querySelector('.sidebar-active');
+const btnSidebar = document.querySelector('.btn-sidebar-toggler');
+const aside = document.querySelector('aside');
+const btnCloseSidebar = document.querySelector('.sidebar-active__container-close');
 
-const colorWhite = '#fff';
-const colorBlack = '#222329';
-
-if (window.localStorage.getItem('theme') === null) {
-  window.localStorage.setItem('theme', 1);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  flsFunctions.isWebp();
-
-
-  // import "./files/sliders.js";
-
-  toggleTheme();
-
-  btnToggleTheme.addEventListener('click', () => {
-    if (window.localStorage.getItem('theme') == 1) {
-      window.localStorage.setItem('theme', 0);
-    } else {
-      window.localStorage.setItem('theme', 1);
-    }
-    toggleTheme();
-  });
-
-  function toggleTheme() {
-    if (window.localStorage.getItem('theme') == 1) {
-      root.style.setProperty('--colorFonts', colorBlack);
-      backgroundDarkTheme.style.opacity = 0;
-    } else {
-      root.style.setProperty('--colorFonts', colorWhite);
-      backgroundDarkTheme.style.opacity = 1;
-    }
-
-  };
-
-
-
+btnSidebar.addEventListener('click', () => {
+  aside.style.opacity = 0;
+  sidebarElement.style.display = 'block';
 });
+
+btnCloseSidebar.addEventListener('click', () => {
+  aside.style.opacity = 1;
+  sidebarElement.style.display = 'none';
+});
+
 

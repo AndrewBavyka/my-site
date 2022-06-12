@@ -8,7 +8,7 @@ $width-dot: 20;
   height: calc(#{$number} * 1px);
 }
 
-button {
+.btn-sidebar-toggler {
   padding: 0;
   @include width-px($width-btn);
   @include height-px($width-btn);

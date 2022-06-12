@@ -1,7 +1,12 @@
 .sidebar-active {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     &__container {
-        height: 100%;
-        width: 235px;
+        height: 100vh;
+        width: 205px;
 
         &-close {
             display: flex;
@@ -80,7 +85,6 @@
 
                 &.active-link {
                     background-color: var(--violet);
-                    ;
                 }
 
                 &-tg {
