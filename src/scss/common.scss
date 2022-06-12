@@ -4,53 +4,83 @@
     margin: 0 auto;
 }
 
-//Цвет для шрифтов
-$black:#222329;
+:root {
+    //Цвет для шрифтов
+    --colorFonts: #222329;
 
-//Цвета
-$white: #FCFBFF;
-$lightWhite:#FFFFFF;
+    //Цвета
+    --white: #fcfbfb;
+    --lightWhite: #FFFFFF;
 
-$violet:#705EDC;
-$lightViolet:#BBB2EB;
+    --violet: #705EDC;
+    --lightViolet: #BBB2EB;
 
-$gray: #6D6D70;
-$lightGray:#F3F3F3;
+    --gray: #6D6D70;
+    --lightGray: #F3F3F3;
 
-//Цвет фона для тёмной темы
-$darkViolet: linear-gradient(121.09deg, #1C1231 18.81%, #bf8787 18.81%, #1C1231 18.82%, #150F22 60.67%, #000000 100%);
+    //Цвет фона для тёмной темы
+    --darkViolet: linear-gradient(121.09deg, rgba(28, 18, 49) 18.81%, rgba(0, 0, 0) 18.81%, rgba(28, 18, 49) 18.82%, rgba(21, 15, 34) 60.67%, rgba(0, 0, 0) 100%);
 
-p{
-    font-family: 'Bad Script', cursive;
+    // цвет квадратиков в кнопке открывающей меню  
+    --nanMenu-btn: #B5AFAF;
 }
 
-h1,h2,h3{
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--white);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+}
+
+.dark-theme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: -10;
+    transition: 0.6s;
+    background: var(--darkViolet);
+}
+
+.bg-block{
+    background-color: var( --lightWhite);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 25px 25px 0px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
     font-family: 'Montserrat', sans-serif;
-    color: $black;
+    color: var(--colorFonts);
+    margin: 0;
+    padding: 0;
+    transition: 0.6s;
 }
 
-h1{
+h1 {
     font-size: 64px;
     font-weight: 700;
 }
 
-html, body{
-    margin: 0;
-    padding: 0; 
-}
-
-body{
-    overflow: hidden;
-    width: 100vh;
-    height: 100vh;
-    display: flex;
-    gap: 20px;
-    background-color: $white;
-}
-
-//Белые скругленные блоки
-.bg-block{
-    background: $lightWhite;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 0px 25px 25px 0px;
+a {
+    text-decoration: none;
 }

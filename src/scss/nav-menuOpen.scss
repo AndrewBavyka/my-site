@@ -1,0 +1,84 @@
+$width-btn: 75;
+$width-dot: 20;
+
+@mixin width-px($number) {
+  width: calc(#{$number} * 1px);
+}
+@mixin height-px($number) {
+  height: calc(#{$number} * 1px);
+}
+
+button {
+  padding: 0;
+  @include width-px($width-btn);
+  @include height-px($width-btn);
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: 1s;
+  span {
+    @include width-px($width-dot);
+    @include height-px($width-dot);
+    content: "";
+    background-color: var(--nanMenu-btn);
+    transition: 1s;
+    position: absolute;
+    &:first-child {
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2) {
+      top: 0;
+      left: calc(
+        (#{$width-dot} / #{$width-btn} * 100%)
+        + ((#{$width-btn} * 1px - #{$width-dot} * 3 * 1px) / 2)
+      );
+    }
+    &:nth-child(3) {
+      top: 0;
+      right: 0;
+    }
+    &:nth-child(4) {
+      top: calc(
+        (#{$width-dot} / #{$width-btn} * 100%)
+        + ((#{$width-btn} * 1px - #{$width-dot} * 3 * 1px) / 2)
+      );
+      left: 0;
+    }
+    &:nth-child(5) {
+      top: calc(
+        (#{$width-dot} / #{$width-btn} * 100%)
+        + ((#{$width-btn} * 1px - #{$width-dot} * 3 * 1px) / 2)
+      );
+      left: calc(
+        (#{$width-dot} / #{$width-btn} * 100%)
+        + ((#{$width-btn} * 1px - #{$width-dot} * 3 * 1px) / 2)
+      );
+    }
+    &:nth-child(6) {
+      top: calc(
+        (#{$width-dot} / #{$width-btn} * 100%)
+        + ((#{$width-btn} * 1px - #{$width-dot} * 3 * 1px) / 2)
+      );
+      right: 0;
+    }
+    &:nth-child(7) {
+      top: calc(#{$width-btn} * 1px - #{$width-dot} * 1px);
+      left: 0;
+    }
+    &:nth-child(8) {
+      top: calc(#{$width-btn} * 1px - #{$width-dot} * 1px);
+      left: calc(
+        (#{$width-dot} / #{$width-btn} * 100%)
+        + ((#{$width-btn} * 1px - #{$width-dot} * 3 * 1px) / 2)
+      );
+    }
+    &:last-child {
+      top: calc(#{$width-btn} * 1px - #{$width-dot} * 1px);
+      right: 0;
+    }
+
+  }
+}

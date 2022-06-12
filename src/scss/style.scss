@@ -4,9 +4,12 @@
 @import "common";
 
 // Подключение стилей отдельных блоков
+@import "nav";
+@import "nav-menuOpen";
+@import "nav-themeToggler";
 @import "header";
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
+@import "main-page";
 @import "sidebar-active";
