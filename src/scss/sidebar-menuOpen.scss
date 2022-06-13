@@ -17,7 +17,6 @@ $width-dot: 20;
   cursor: pointer;
   position: relative;
   outline: none;
-  transition: 1s;
   span {
     @include width-px($width-dot);
     @include height-px($width-dot);

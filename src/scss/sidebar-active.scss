@@ -6,7 +6,7 @@
 
     &__container {
         height: 100vh;
-        width: 205px;
+        width: 235px;
 
         &-close {
             display: flex;
@@ -18,20 +18,13 @@
     }
 
     &__nav {
+        margin-top: 45px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 15px 0;
 
         .menu {
-            &.menu-nav {
-                & span {
-                    color: var(--colorFonts);
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 500;
-                    font-size: 20px;
-                }
-            }
 
             &-list {
                 padding: 0;
@@ -43,7 +36,6 @@
 
                 &-item {
                     list-style: none;
-                    text-decoration: none;
                     display: flex;
                     align-items: center;
                     flex-direction: column;
@@ -52,6 +44,10 @@
                         opacity: 0;
                         transition: 0.3s;
                         transform: translateY(0px);
+                        color: var(--colorFonts);
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 20px;
                     }
                 }
             }
@@ -71,7 +67,6 @@
                 & img {
                     width: 55px;
                     height: 55px;
-
                 }
 
                 &:hover {
