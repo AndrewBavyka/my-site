@@ -11,7 +11,7 @@ let stopAnim = 0;
 
 let settingAnimOM = anime.timeline({
   easing: 'easeOutExpo',
-  autoplay: false,
+  autoplay: true,
   loop: true,
   duration: 400
 });
@@ -41,4 +41,4 @@ function pos(e){
   }
 }
 
-addEventListener('mousemove', pos, false);
+// addEventListener('mousemove', pos, false);
