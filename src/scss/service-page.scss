@@ -15,8 +15,14 @@
     background-color: red;
     height: 60%;
     bottom: 175px;
-    .service-test {
-      margin-top: 20px;
+    .service-swiper {
+      height: 100%;
+      &-wrapper {
+
+        .item {
+          background-color: pink;
+        }
+      }
     }
   }
 }
