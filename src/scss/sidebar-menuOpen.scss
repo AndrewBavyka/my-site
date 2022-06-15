@@ -9,7 +9,7 @@ $width-dot: 20;
   height: calc(#{$number} * 1px);
 }
 
-button {
+.btn-sidebar-toggler {
   padding: 0;
   @include width-px($width-btn);
   @include height-px($width-btn);
@@ -18,13 +18,11 @@ button {
   cursor: pointer;
   position: relative;
   outline: none;
-  transition: 1s;
-
   span {
     @include width-px($width-dot);
     @include height-px($width-dot);
     content: "";
-    background-color: var(--nanMenu-btn);
+    background-color: var(--navMenu-btn);
     transition: 1s;
     position: absolute;
 

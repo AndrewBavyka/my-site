@@ -1,49 +1,40 @@
+"use strict";
+
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
 import "../scss/style.scss";
+
+// изменение цвета темы
+import "./files/toggleTheme.js";
+
+// включение/выключение меню
+import "./files/toggleMenu.js";
+
+// анимация для кнопки включения меню
+import "./files/animationBtnOpenMenu.js";
+
+// Переключение экранов
+import "./files/toggleTabs.js";
 
 import * as flsFunctions from "./files/functions.js";
 
-const btnToggleTheme = document.querySelector('.btn-toggle-theme')
-
-const root = document.documentElement;
-const backgroundDarkTheme = document.querySelector('.dark-theme');
-
-const colorWhite = '#fff';
-const colorBlack = '#222329';
-
-if (window.localStorage.getItem('theme') === null) {
-  window.localStorage.setItem('theme', 1);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  flsFunctions.isWebp();
+flsFunctions.isWebp();
 
 
-  // import "./files/sliders.js";
-
-  toggleTheme();
-
-  btnToggleTheme.addEventListener('click', () => {
-    if (window.localStorage.getItem('theme') == 1) {
-      window.localStorage.setItem('theme', 0);
-    } else {
-      window.localStorage.setItem('theme', 1);
-    }
-    toggleTheme();
-  });
-
-  function toggleTheme() {
-    if (window.localStorage.getItem('theme') == 1) {
-      root.style.setProperty('--colorFonts', colorBlack);
-      backgroundDarkTheme.style.opacity = 0;
-    } else {
-      root.style.setProperty('--colorFonts', colorWhite);
-      backgroundDarkTheme.style.opacity = 1;
-    }
-
-  };
-
-
-
+var swiper = new Swiper(".js-mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
+
+
 

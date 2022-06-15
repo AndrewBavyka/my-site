@@ -4,12 +4,16 @@
 	"title":"Андрей"
 })
 <body>
-	<div class="dark-theme"></div>
-	@@include('html/_nav.htm',{})
+	
+	@@include('html/_sidebar.htm',{})
 	@@include('html/_sidebar-active.htm',{})
 	<main>
 		@@include('html/_main-page.htm',{})
+		@@include('html/_about-me.htm',{})
+		@@include('html/_skills-page.htm',{})
+		@@include('html/_service-page.htm',{})
 	</main>	
+	<div class="dark-theme"></div>
 	@@include('html/_js.htm',{})
 </body>
 

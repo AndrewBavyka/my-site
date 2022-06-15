@@ -1,0 +1,28 @@
+.service-page {
+  display: flex;
+  flex-direction: column;
+
+  &__sub-title {
+    font-weight: 500;
+    font-size: 32px;
+    color: #6D6D70;
+  }
+
+  .service-container {
+    left: 0;
+    width: 100%;
+    position: absolute;
+    background-color: red;
+    height: 60%;
+    bottom: 175px;
+    .service-swiper {
+      height: 100%;
+      &-wrapper {
+
+        .item {
+          background-color: pink;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,10 @@
 .sidebar {
-    width: 22%;
+    width: 11.49%;
 
     &-wrapper {
         border-radius: 0px 25px 25px 0px;
         height: 100%;
+        padding-top: 15px;
 
         .menu-nav {
             height: 100%;
@@ -11,7 +12,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
 
             &-close {
                 display: flex;
@@ -20,15 +20,82 @@
             }
 
             &-items {
+                padding: 10% 25% 0 25%;
+
                 .nav-list {
                     padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
 
                     &-item {
                         list-style: none;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 15px;
+
+                        .btn-nav-pages {
+                            background-color: var(--lightGray);
+                            border-radius: 25px;
+                            max-width: 100%;
+                            width: 100%;
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover {
+                                background-color: var(--violet);
+                                .icon-nav {
+                                    transition: 0.5s;
+                                    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(347deg) brightness(99%) contrast(104%);
+
+                                    &.active-page-js {
+                                        filter: none;
+                                    }
+                                }
+                            }
+
+                            &:hover+.drop-link {
+                                transition: 0.4s ease-out;
+                                visibility: visible;
+                                opacity: 1;
+                                transform: translateY(5px);
+                            }
+
+                            &.active-page-js {
+                                background-color: var(--violet);
+
+                            }
+
+                            &.icon-nav {
+                                width: 100%;
+                                max-width: 55px;
+                                height: 100%;
+                                max-height: 55px;
+                            }
+
+                            &.link-tg {
+                                background-color: #039BE5;
+                            }
+                        }
+
+                        .drop-link {
+                            color: var(--colorFonts);
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: 500;
+                            font-size: 20px;
+                            visibility: hidden;
+                            transform: translateY(0);
+                            transition: 0.4s ease;
+                            opacity: 0;
+                        }
                     }
                 }
             }
-
         }
     }
 }
