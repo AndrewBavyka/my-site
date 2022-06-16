@@ -9,8 +9,7 @@ const backgroundDarkTheme = document.querySelector('.dark-theme');
 // иконка луны
 const icon1 = document.querySelector('.btn-toggle-theme img');
 // иконка закрытия меню
-const icon2 = document.querySelector('.sidebar-active__container-close img');
-
+const icon2 = document.querySelector('.sidebar-close-js');
 
 
 // массив со всеми иконками, цвет которых требуется изменить при смене темы
@@ -62,7 +61,5 @@ function toggleTheme() {
     })
     root.style.setProperty('--colorFonts', colorWhite);
     backgroundDarkTheme.style.opacity = 1;
-    
   }
-
 };

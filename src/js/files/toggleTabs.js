@@ -18,6 +18,7 @@ btnToggleTabs.forEach((item, id) => {
   })
 })
 
+
 function toggleTabs(id) {
   tabs.forEach(item => {
     item.style.display = 'none';
