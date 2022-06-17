@@ -15,7 +15,8 @@ import "./files/toggleMenu.js";
 
 // анимация для кнопки включения меню
 import "./files/animationBtnOpenMenu.js";
-
+// анимация точек в мессенджере (Обо мне)
+import "./files/animationDotsMessenger.js";
 // Переключение экранов
 import "./files/toggleTabs.js";
 

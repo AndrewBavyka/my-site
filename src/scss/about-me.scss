@@ -1,7 +1,7 @@
 .about-me-page {
     width: 100%;
     height: 100vh;
-    
+
     .main-img-position {
         display: none;
         position: absolute;
@@ -14,7 +14,7 @@
         bottom: 0;
         // margin: 0 auto;
         display: flex;
-        height: 80vh;
+        height: 65vh;
         width: 65%; //Временная ширина потом убрать 
         background-color: var(--lightWhite);
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
@@ -96,13 +96,25 @@
                         font-size: 20px;
                         line-height: 150%;
                     }
+
                     a {
-                        
+
                         font-weight: 700;
                     }
 
                 }
             }
+        }
+
+        /* полоса прокрутки (скроллбар) */
+        ::-webkit-scrollbar {
+            background-color: var(--lightWhite);
+        }
+
+        /* ползунок скроллбара */
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--violet);
+            border-radius: 30px;
         }
     }
 
