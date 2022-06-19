@@ -1,0 +1,134 @@
+.about-me-page {
+    width: 100%;
+    height: 100vh;
+
+    .main-img-position {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(95%, -50%);
+    }
+
+    .messenger {
+        position: absolute;
+        bottom: 0;
+        // margin: 0 auto;
+        display: flex;
+        height: 65vh;
+        width: 65%; //Временная ширина потом убрать 
+        background-color: var(--lightWhite);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        flex-direction: column;
+
+        &-title {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 20px 15px 20px;
+            border-bottom: solid 3px #E4E4E4;
+
+            .title-user {
+                display: flex;
+                justify-content: space-between;
+                width: 52%;
+                align-items: center;
+
+                .user-description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 10px;
+
+                    & h3 {
+                        font-size: 36px;
+                    }
+
+                    & p {
+                        color: var(--gray);
+                        font-weight: 700;
+                    }
+
+                    .typing-anim {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+
+                        & span {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background-color: var(--lightViolet);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &-content {
+            padding: 6% 6% 0 6.5%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 85px;
+            overflow: scroll;
+            overflow-x: hidden;
+
+            .message-container {
+                display: flex;
+                justify-content: flex-start;
+                gap: 60px;
+                align-items: flex-end;
+
+                &-content {
+                    max-width: 520px;
+                    background-color: var(--lightWhite);
+                    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+                    border-radius: 30px 30px 30px 0px;
+                    display: flex;
+                    align-items: center;
+                    padding: 28px 38px 28px 38px;
+
+                    & a,
+                    p {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 150%;
+                    }
+
+                    a {
+
+                        font-weight: 700;
+                    }
+
+                }
+            }
+        }
+
+        /* полоса прокрутки (скроллбар) */
+        ::-webkit-scrollbar {
+            background-color: var(--lightWhite);
+        }
+
+        /* ползунок скроллбара */
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--violet);
+            border-radius: 30px;
+        }
+    }
+
+    .user-avatar {
+        background-color: var(--violet);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 110px;
+        height: 110px;
+
+        & img {
+            width: 65px;
+        }
+    }
+}
